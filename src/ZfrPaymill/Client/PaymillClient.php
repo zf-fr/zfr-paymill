@@ -40,6 +40,27 @@ use Guzzle\Service\Description\ServiceDescription;
  * @method array getPreauthorization(array $args = array()) {@command Paymill GetPreauthorization}
  * @method array getPreauthorizations(array $args = array()) {@command Paymill GetPreauthorizations}
  *
+ * TRANSACTION RELATED METHODS:
+ *
+ * @method array createTransaction(array $args = array()) {@command Paymill CreateTransaction}
+ * @method array getTransaction(array $args = array()) {@command Paymill GetTransaction}
+ * @method array getTransactions(array $args = array()) {@command Paymill GetTransactions}
+ * @method array updateTransaction(array $args = array()) {@command Paymill UpdateTransaction}
+ *
+ * REFUND RELATED METHODS:
+ *
+ * @method array getRefund(array $args = array()) {@command Paymill GetRefund}
+ * @method array getRefunds(array $args = array()) {@command Paymill GetRefunds}
+ * @method array refundTransaction(array $args = array()) {@command Paymill RefundTransaction}
+ *
+ * CLIENT RELATED METHODS:
+ *
+ * @method array createClient(array $args = array()) {@command Paymill CreateClient}
+ * @method array deleteClient(array $args = array()) {@command Paymill DeleteClient}
+ * @method array getClient(array $args = array()) {@command Paymill GetClient}
+ * @method array getClients(array $args = array()) {@command Paymill GetClients}
+ * @method array updateClient(array $args = array()) {@command Paymill UpdateClient}
+ *
  * OFFER RELATED METHODS:
  *
  * @method array createOffer(array $args = array()) {@command Paymill CreateOffer}
