@@ -56,6 +56,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/payments',
             'summary'          => 'Create a new payment (optionally for a client)',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'token' => array(
                     'description' => 'Unique credit card token',
@@ -76,6 +77,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/payments/{id}',
             'summary'          => 'Delete an existing payment',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Payment unique identifier',
@@ -90,6 +92,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/payments/{id}',
             'summary'          => 'Get details about a payment',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Payment unique identifier',
@@ -104,6 +107,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/payments',
             'summary'          => 'Get details about payments',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many payments to retrieve',
@@ -154,6 +158,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/preauthorizations',
             'summary'          => 'Create a new preauthorization payment (you need to specify either token OR payment)',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'token' => array(
                     'description' => 'Token identifier',
@@ -186,6 +191,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/preauthorizations/{id}',
             'summary'          => 'Delete an existing preauthorization',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Preauthorization unique identifier',
@@ -200,6 +206,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/preauthorizations/{id}',
             'summary'          => 'Get details about a preauthorization',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Preauthorization unique identifier',
@@ -214,6 +221,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/preauthorizations',
             'summary'          => 'Get details about preauthorizations',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many preauthorizations to retrieve',
@@ -272,6 +280,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/transactions',
             'summary'          => 'Create a new transaction',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'amount' => array(
                     'description' => 'Amount (in cents) to be charged',
@@ -334,6 +343,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/transactions/{id}',
             'summary'          => 'Get details about a transaction',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Transaction unique identifier',
@@ -348,6 +358,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/offers',
             'summary'          => 'Get details about transactions',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many transactions to retrieve',
@@ -414,6 +425,7 @@ return array(
             'httpMethod'       => 'PUT',
             'uri'              => '/v2/transactions/{id}',
             'summary'          => 'Update an existing transaction',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Transaction unique identifier',
@@ -442,6 +454,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/refunds/{id}',
             'summary'          => 'Get details about a refund',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Refund identifier',
@@ -506,6 +519,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/refunds/{transaction_id}',
             'summary'          => 'Refunds a transaction',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'transaction_id' => array(
                     'description' => 'Transaction identifier',
@@ -540,6 +554,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/clients',
             'summary'          => 'Create a new client',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'email' => array(
                     'description' => 'Client email',
@@ -560,6 +575,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/clients/{id}',
             'summary'          => 'Delete an existing client',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Client unique identifier',
@@ -574,6 +590,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/clients/{id}',
             'summary'          => 'Get details about a client',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Client unique identifier',
@@ -588,6 +605,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/clients',
             'summary'          => 'Get details about clients',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many subscriptions to retrieve',
@@ -656,6 +674,7 @@ return array(
             'httpMethod'       => 'PUT',
             'uri'              => '/v2/clients/{id}',
             'summary'          => 'Update an existing client',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Client unique identifier',
@@ -696,6 +715,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/offers',
             'summary'          => 'Create a new offer (recurring plan)',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'name' => array(
                     'description' => 'Offer name',
@@ -749,6 +769,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/offers/{id}',
             'summary'          => 'Get details about an offer',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Offer unique identifier',
@@ -763,6 +784,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/offers',
             'summary'          => 'Get details about offers',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many subscriptions to retrieve',
@@ -819,6 +841,7 @@ return array(
             'httpMethod'       => 'PUT',
             'uri'              => '/v2/offers/{id}',
             'summary'          => 'Update an existing offer',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Offer unique identifier',
@@ -847,6 +870,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/subscriptions',
             'summary'          => 'Create a new subscription',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'offer' => array(
                     'description' => 'Unique offer identifier',
@@ -879,6 +903,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/subscriptions/{id}',
             'summary'          => 'Delete an existing subscription',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Subscription unique identifier',
@@ -893,6 +918,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/subscriptions/{id}',
             'summary'          => 'Get details about a subscription',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Subscription unique identifier',
@@ -907,6 +933,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/subscriptions',
             'summary'          => 'Get details about subscriptions',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many subscriptions to retrieve',
@@ -945,6 +972,7 @@ return array(
             'httpMethod'       => 'PUT',
             'uri'              => '/v2/subscriptions/{id}',
             'summary'          => 'Update an existing subscription',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Subscription unique identifier',
@@ -985,6 +1013,7 @@ return array(
             'httpMethod'       => 'POST',
             'uri'              => '/v2/webhooks',
             'summary'          => 'Create a new webhook (either URL or e-mail)',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'url' => array(
                     'description' => 'The URL of the webhook',
@@ -1021,6 +1050,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/webhooks/{id}',
             'summary'          => 'Delete an existing webhook',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Webhook unique identifier',
@@ -1035,6 +1065,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/webhooks/{id}',
             'summary'          => 'Get details about an existing webhook',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Webhook unique identifier',
@@ -1049,6 +1080,7 @@ return array(
             'httpMethod'       => 'GET',
             'uri'              => '/v2/webhooks',
             'summary'          => 'Get details about existing webhooks',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'count' => array(
                     'description' => 'How many webhooks to retrieve',
@@ -1093,6 +1125,7 @@ return array(
             'httpMethod'       => 'PUT',
             'uri'              => '/v2/webhooks/{id}',
             'summary'          => 'Update an existing webhook (either URL or e-mail)',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Webhook unique identifier',
