@@ -43,7 +43,10 @@ abstract class AbstractException extends \Exception implements ExceptionInterfac
      */
     public static function fromCommand(CommandInterface $command, Response $response)
     {
-        $exception = new static($response->getReasonPhrase(), $response->getStatusCode());
+        $errors = json_decode($response->getBody(true), true);
+        $error  = isset($errors['error']) ? $errors['error'] : 'Unknown error';
+
+        $exception = new static($error, $response->getStatusCode());
         $exception->setRequest($command->getRequest());
         $exception->setResponse($response);
 
