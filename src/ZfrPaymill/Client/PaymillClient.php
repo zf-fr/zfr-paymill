@@ -50,6 +50,8 @@ class PaymillClient extends Client
      */
     public function __construct($apiKey, $version = self::LATEST_API_VERSION)
     {
+        parent::__construct();
+        
         $this->apiKey = $apiKey;
 
         $this->setDescription(ServiceDescription::factory(sprintf(
