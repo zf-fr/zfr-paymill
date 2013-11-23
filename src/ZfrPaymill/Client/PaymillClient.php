@@ -16,12 +16,13 @@
  * and is licensed under the MIT license.
  */
 
-namespace ZfrPaymill;
+namespace ZfrPaymill\Client;
 
 use Guzzle\Common\Event;
 use Guzzle\Plugin\ErrorResponse\ErrorResponsePlugin;
 use Guzzle\Service\Client;
 use Guzzle\Service\Description\ServiceDescription;
+use ZfrPaymill\Listener\ErrorHandlerListener;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
@@ -123,6 +124,7 @@ class PaymillClient extends Client
 
         $dispatcher->addListener('command.before_send', array($this, 'authorizeRequest'));
         $dispatcher->addSubscriber(new ErrorResponsePlugin());
+        $dispatcher->addSubscriber(new ErrorHandlerListener());
     }
 
     /**

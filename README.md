@@ -80,7 +80,11 @@ try {
         'token'    => '1234'
     ));
 } catch (\ZfrPaymill\Exception\TransactionErrorException $exception) {
-    // Seems the transaction failed
+    // Seems the transaction failed, let's see why:
+    $why = $exception->getMessage();
+
+    // Let's also get the response to have more info:
+    $response = $exception->getResponse();
 } catch (\Exception $exception) {
     // Catch any other exception...
 }
