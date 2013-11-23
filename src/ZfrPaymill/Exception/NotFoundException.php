@@ -16,23 +16,12 @@
  * and is licensed under the MIT license.
  */
 
-namespace ZfrPaymill;
-
-use Guzzle\Http\Message\Response;
-use Guzzle\Service\Command\CommandInterface;
-use RuntimeException as BaseRuntimeException;
+namespace ZfrPaymill\Exception;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
  * @licence MIT
  */
-class NotFoundException extends BaseRuntimeException implements ExceptionInterface
+class NotFoundException extends AbstractException
 {
-    /**
-     * {@inheritDoc}
-     */
-    public static function fromCommand(CommandInterface $command, Response $response)
-    {
-        return new NotFoundException($response->getMessage(), $response->getStatusCode());
-    }
 }

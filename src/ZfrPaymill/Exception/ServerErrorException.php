@@ -16,29 +16,14 @@
  * and is licensed under the MIT license.
  */
 
-namespace ZfrPaymill\Exception;
+namespace ZfrPaymill;
 
-use Guzzle\Http\Message\Request;
-use Guzzle\Http\Message\Response;
-use Guzzle\Plugin\ErrorResponse\ErrorResponseExceptionInterface;
+use ZfrPaymill\Exception\AbstractException;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
  * @licence MIT
  */
-interface ExceptionInterface extends ErrorResponseExceptionInterface
+class RuntimeException extends AbstractException
 {
-    /**
-     * Get the request object
-     *
-     * @return Request
-     */
-    public function getRequest();
-
-    /**
-     * Get the response object
-     *
-     * @return Response
-     */
-    public function getResponse();
 }

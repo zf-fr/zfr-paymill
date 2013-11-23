@@ -16,23 +16,69 @@
  * and is licensed under the MIT license.
  */
 
-namespace ZfrPaymill;
+namespace ZfrPaymill\Exception;
 
+use Guzzle\Http\Message\Request;
 use Guzzle\Http\Message\Response;
 use Guzzle\Service\Command\CommandInterface;
-use RuntimeException as BaseRuntimeException;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
  * @licence MIT
  */
-class RuntimeException extends BaseRuntimeException implements ExceptionInterface
+abstract class AbstractException extends \Exception implements ExceptionInterface
 {
+    /**
+     * @var Request
+     */
+    protected $request;
+
+    /**
+     * @var Response
+     */
+    protected $response;
+
     /**
      * {@inheritDoc}
      */
     public static function fromCommand(CommandInterface $command, Response $response)
     {
-        return new RuntimeException($response->getMessage(), $response->getStatusCode());
+        $exception = new static($response->getReasonPhrase(), $response->getStatusCode());
+        $exception->setRequest($command->getRequest());
+        $exception->setResponse($response);
+
+        return $exception;
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function setRequest(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    /**
+     * @return Request
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    /**
+     * @param Response $response
+     */
+    public function setResponse(Response $response)
+    {
+        $this->response = $response;
+    }
+
+    /**
+     * @return Response
+     */
+    public function getResponse()
+    {
+        return $this->response;
     }
 }

@@ -22,7 +22,7 @@ $errors = array(
         'code'  => 401
     ),
     array(
-        'class' => 'ZfrPaymill\Exception\TransactionException',
+        'class' => 'ZfrPaymill\Exception\TransactionErrorException',
         'code'  => 403
     ),
     array(
@@ -34,7 +34,7 @@ $errors = array(
         'code'  => 412
     ),
     array(
-        'class' => 'ZfrPaymill\Exception\RuntimeException'
+        'class' => 'ZfrPaymill\Exception\ServerErrorException'
     )
 );
 
