@@ -26,6 +26,36 @@ use Guzzle\Service\Description\ServiceDescription;
  * @author  Michaël Gallego <mic.gallego@gmail.com>
  * @licence MIT
  *
+ * PAYMENT RELATED METHODS:
+ *
+ * @method array createPayment(array $args = array()) {@command Paymill CreatePayment}
+ * @method array deletePayment(array $args = array()) {@command Paymill DeletePayment}
+ * @method array getPayment(array $args = array()) {@command Paymill GetPayment}
+ * @method array getPayments(array $args = array()) {@command Paymill GetPayments}
+ *
+ * PREAUTHORIZATION RELATED METHODS:
+ *
+ * @method array createPreauthorization(array $args = array()) {@command Paymill CreatePreauthorization}
+ * @method array deletePreauthorization(array $args = array()) {@command Paymill DeletePreauthorization}
+ * @method array getPreauthorization(array $args = array()) {@command Paymill GetPreauthorization}
+ * @method array getPreauthorizations(array $args = array()) {@command Paymill GetPreauthorizations}
+ *
+ * OFFER RELATED METHODS:
+ *
+ * @method array createOffer(array $args = array()) {@command Paymill CreateOffer}
+ * @method array deleteOffer(array $args = array()) {@command Paymill DeleteOffer}
+ * @method array getOffer(array $args = array()) {@command Paymill GetOffer}
+ * @method array getOffers(array $args = array()) {@command Paymill GetOffers}
+ * @method array updateOffer(array $args = array()) {@command Paymill UpdateOffer}
+ *
+ * SUBSCRIPTION RELATED METHODS:
+ *
+ * @method array createSubscription(array $args = array()) {@command Paymill CreateSubscription}
+ * @method array deleteSubscription(array $args = array()) {@command Paymill DeleteSubscription}
+ * @method array getSubscription(array $args = array()) {@command Paymill GetSubscription}
+ * @method array getSubscriptions(array $args = array()) {@command Paymill GetSubscriptions}
+ * @method array updateSubscription(array $args = array()) {@command Paymill UpdateSubscription}
+ *
  * WEBHOOK RELATED METHODS:
  *
  * @method array createWebhook(array $args = array()) {@command Paymill CreateWebhook}
