@@ -25,6 +25,10 @@ use Guzzle\Service\Description\ServiceDescription;
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
  * @licence MIT
+ *
+ * WEBHOOK RELATED METHODS:
+ *
+ * @method array createWebhook(array $args = array()) {@command Paymill CreateWebhook}
  */
 class PaymillClient extends Client
 {
@@ -60,6 +64,24 @@ class PaymillClient extends Client
         // Add an event to set the Authorization param
         $dispatcher = $this->getEventDispatcher();
         $dispatcher->addListener('command.before_send', array($this, 'authorizeRequest'));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __call($method, $args = array())
+    {
+        return parent::__call(ucfirst($method), $args);
+    }
+
+    /**
+     * Get current MailChimp API version
+     *
+     * @return string
+     */
+    public function getApiVersion()
+    {
+        return $this->serviceDescription->getApiVersion();
     }
 
     /**
