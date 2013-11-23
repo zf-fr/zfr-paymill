@@ -1,0 +1,30 @@
+{
+    "name": "zfr/zfr-paymill",
+    "type": "library",
+    "license": "MIT",
+    "description" : "PHP library for interacting with the Paymill REST API",
+    "keywords": [
+        "paymill",
+        "payment"
+    ],
+    "homepage": "https://github.com/zf-fr/zfr-paymill",
+    "authors": [
+        {
+            "name": "Michaël Gallego",
+            "email": "mic.gallego@gmail.com",
+            "homepage": "http://www.michaelgallego.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "guzzle/guzzle": ">=3.5,<=3.8"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfrPaymill\\": "src/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
