@@ -104,7 +104,7 @@ class ErrorHandlerListener implements EventSubscriberInterface
             $exception->setRequest($command->getRequest());
             $exception->setResponse($command->getResponse());
 
-            throw new $exception;
+            throw $exception;
         }
     }
 }

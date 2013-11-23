@@ -24,47 +24,26 @@ use ZfrPaymill\Client\PaymillClient;
 class PaymillClientTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var PusherClient
+     * @var PaymillClient
      */
     protected $client;
 
-    /**
-     * @var Credentials
-     */
-    protected $credentials;
-
     public function setUp()
     {
-        $this->credentials = new Credentials('3', '278d425bdf160c739803', '7ad3773142a6692b25b8');
-        $this->client      = new PusherClient($this->credentials);
+        $this->client = new PaymillClient('abc');
     }
 
-    /**
-     * @covers PusherClient::__construct
-     */
-    public function testAssertApplicationIdIsAlwaysSent()
-    {
-        $config = $this->client->getConfig('command.params');
-        $this->assertEquals($config['app_id'], $this->credentials->getAppId());
-    }
-
-    /**
-     * @covers PusherClient::getApiVersion
-     */
     public function testCanRetrieveApiVersion()
     {
-        $this->assertEquals('1.0', $this->client->getApiVersion());
+        $this->assertEquals('2.0', $this->client->getApiVersion());
     }
 
-    /**
-     * @covers PusherClient
-     */
     public function testUserAgentIsIncluded()
     {
         // Make sure the user agent contains "pusher-php"
-        $command = $this->client->getCommand('GetChannelsInfo');
+        $command = $this->client->getCommand('GetOffers');
         $request = $command->prepare();
         $this->client->dispatch('command.before_send', array('command' => $command));
-        $this->assertRegExp('/^zfr-pusher-php/', (string)$request->getHeader('User-Agent', true));
+        $this->assertRegExp('/^zfr-paymill-php/', (string)$request->getHeader('User-Agent', true));
     }
 }

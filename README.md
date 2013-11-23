@@ -90,6 +90,11 @@ try {
 }
 ```
 
+> For transaction/refund/preauthorization methods, Paymill may return status code 200 even if an error occured.
+Paymill stores this error in a `response_code` property in the reponse. However, ZfrPaymill will automatically
+checks if this is set, and throw a `TransactionErrorException`, so that you don't need to check for this yourself,
+but only catch the exception.
+
 ### Advanced usage
 
 #### Listeners
