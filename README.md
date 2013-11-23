@@ -108,59 +108,59 @@ Here is a complete list of all methods, with a link to the official documentatio
 
 PAYMENT RELATED METHODS:
 
-array createPayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-credit-card-payment-with)
-array deletePayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-payment)
-array getPayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#payment-details)
-array getPayments(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-payments)
+* array createPayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-credit-card-payment-with)
+* array deletePayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-payment)
+* array getPayment(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#payment-details)
+* array getPayments(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-payments)
 
 PREAUTHORIZATION RELATED METHODS:
 
-array createPreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-preauthorization-with)
-array deletePreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-preauthorizations)
-array getPreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#preauthorization-details)
-array getPreauthorizations(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-preauthorizations)
+* array createPreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-preauthorization-with)
+* array deletePreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-preauthorizations)
+* array getPreauthorization(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#preauthorization-details)
+* array getPreauthorizations(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-preauthorizations)
 
 TRANSACTION RELATED METHODS:
 
-array createTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-transaction-with)
-array getTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-transaction)
-array getTransactions(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#transaction-details)
-array updateTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-transactions)
+* array createTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-transaction-with)
+* array getTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-transaction)
+* array getTransactions(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#transaction-details)
+* array updateTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-transactions)
 
 REFUND RELATED METHODS:
 
-array getRefund(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#refund-details)
-array getRefunds(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-refunds)
-array refundTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#refund-transaction)
+* array getRefund(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#refund-details)
+* array getRefunds(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-refunds)
+* array refundTransaction(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#refund-transaction)
 
 CLIENT RELATED METHODS:
 
-array createClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-client)
-array deleteClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-client)
-array getClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#client-details)
-array getClients(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-clients)
-array updateClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-client)
+* array createClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-client)
+* array deleteClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-client)
+* array getClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#client-details)
+* array getClients(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-clients)
+* array updateClient(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-client)
 
 OFFER RELATED METHODS:
 
-array createOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-offer)
-array deleteOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-offer)
-array getOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#offer-details)
-array getOffers(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-offers)
-array updateOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-offer)
+* array createOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-offer)
+* array deleteOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-offer)
+* array getOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#offer-details)
+* array getOffers(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-offers)
+* array updateOffer(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-offer)
 
 SUBSCRIPTION RELATED METHODS:
 
-array createSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-subscription)
-array deleteSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-subscription)
-array getSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#subscription-details)
-array getSubscriptions(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-subscriptions)
-array updateSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-subscription)
+* array createSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-subscription)
+* array deleteSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-subscription)
+* array getSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#subscription-details)
+* array getSubscriptions(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-subscriptions)
+* array updateSubscription(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-subscription)
 
 WEBHOOK RELATED METHODS:
 
-array createWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-url-webhook)
-array deleteWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-webhook)
-array getWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#webhook-details)
-array getWebhooks(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-webhooks)
-array updateWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-webhook)
+* array createWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#create-new-url-webhook)
+* array deleteWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#remove-webhook)
+* array getWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#webhook-details)
+* array getWebhooks(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#list-webhooks)
+* array updateWebhook(array $args = array()) [doc](https://www.paymill.com/en-gb/documentation-3/reference/api-reference/#update-webhook)
