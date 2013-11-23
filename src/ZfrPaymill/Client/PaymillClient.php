@@ -120,8 +120,8 @@ class PaymillClient extends Client
 
         // Add an event to set the Authorization param
         $dispatcher = $this->getEventDispatcher();
-        $dispatcher->addListener('command.before_send', array($this, 'authorizeRequest'));
 
+        $dispatcher->addListener('command.before_send', array($this, 'authorizeRequest'));
         $dispatcher->addSubscriber(new ErrorResponsePlugin());
     }
 
