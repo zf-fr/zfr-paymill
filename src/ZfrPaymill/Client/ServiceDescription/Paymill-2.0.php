@@ -16,6 +16,28 @@
  * and is licensed under the MIT license.
  */
 
+$errors = array(
+    array(
+        'class' => 'ZfrPaymill\Exception\UnauthorizedException',
+        'code'  => 401
+    ),
+    array(
+        'class' => 'ZfrPaymill\Exception\TransactionException',
+        'code'  => 403
+    ),
+    array(
+        'class' => 'ZfrPaymill\Exception\NotFoundException',
+        'code'  => 404
+    ),
+    array(
+        'class' => 'ZfrPaymill\Exception\ValidationErrorException',
+        'code'  => 412
+    ),
+    array(
+        'class' => 'ZfrPaymill\Exception\RuntimeException'
+    )
+);
+
 return array(
     'name'        => 'Paymill',
     'apiVersion'  => '2.0',
@@ -712,6 +734,7 @@ return array(
             'httpMethod'       => 'DELETE',
             'uri'              => '/v2/offers/{id}',
             'summary'          => 'Delete an existing offer',
+            'errorResponses'   => $errors,
             'parameters'       => array(
                 'id' => array(
                     'description' => 'Offer unique identifier',
