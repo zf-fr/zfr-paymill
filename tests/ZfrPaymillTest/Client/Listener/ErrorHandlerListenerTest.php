@@ -28,7 +28,7 @@ class ErrorHandlerListenerTest extends PHPUnit_Framework_TestCase
     {
         return array(
             array(
-                10000,
+                20000,
                 null,
                 null
             ),

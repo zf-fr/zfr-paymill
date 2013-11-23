@@ -97,9 +97,9 @@ class ErrorHandlerListener implements EventSubscriberInterface
         $command = $event['command'];
         $result  = $command->toArray();
 
-        $code = isset($result['data']['response_code']) ? $result['data']['response_code'] : 10001;
+        $code = isset($result['data']['response_code']) ? $result['data']['response_code'] : 20000;
 
-        if ($code >= 40000) {
+        if ($code !== 20000) {
             $exception = new TransactionErrorException($this->errorCodes[$code], $code);
             $exception->setRequest($command->getRequest());
             $exception->setResponse($command->getResponse());
