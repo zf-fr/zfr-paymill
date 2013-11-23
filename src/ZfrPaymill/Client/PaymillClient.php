@@ -29,6 +29,10 @@ use Guzzle\Service\Description\ServiceDescription;
  * WEBHOOK RELATED METHODS:
  *
  * @method array createWebhook(array $args = array()) {@command Paymill CreateWebhook}
+ * @method array deleteWebhook(array $args = array()) {@command Paymill DeleteWebhook}
+ * @method array getWebhook(array $args = array()) {@command Paymill GetWebhook}
+ * @method array getWebhooks(array $args = array()) {@command Paymill GetWebhooks}
+ * @method array updateWebhook(array $args = array()) {@command Paymill UpdateWebhook}
  */
 class PaymillClient extends Client
 {
@@ -51,7 +55,7 @@ class PaymillClient extends Client
     public function __construct($apiKey, $version = self::LATEST_API_VERSION)
     {
         parent::__construct();
-        
+
         $this->apiKey = $apiKey;
 
         $this->setDescription(ServiceDescription::factory(sprintf(
@@ -61,7 +65,6 @@ class PaymillClient extends Client
 
         // Prefix the User-Agent by SDK version, and set the base URL
         $this->setUserAgent('zfr-paymill-php', true);
-        $this->setBaseUrl('https://api.paymill.com/v2');
 
         // Add an event to set the Authorization param
         $dispatcher = $this->getEventDispatcher();
