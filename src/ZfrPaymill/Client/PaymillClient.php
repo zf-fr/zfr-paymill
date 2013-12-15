@@ -22,7 +22,7 @@ use Guzzle\Common\Event;
 use Guzzle\Plugin\ErrorResponse\ErrorResponsePlugin;
 use Guzzle\Service\Client;
 use Guzzle\Service\Description\ServiceDescription;
-use ZfrPaymill\Listener\ErrorHandlerListener;
+use ZfrPaymill\Client\Listener\ErrorHandlerListener;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>

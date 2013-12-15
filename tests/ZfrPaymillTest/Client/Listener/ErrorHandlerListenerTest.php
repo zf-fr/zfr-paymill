@@ -20,7 +20,7 @@ namespace ZfrPaymillTest\Client\Listener;
 
 use Guzzle\Common\Event;
 use PHPUnit_Framework_TestCase;
-use ZfrPaymill\Listener\ErrorHandlerListener;
+use ZfrPaymill\Client\Listener\ErrorHandlerListener;
 
 class ErrorHandlerListenerTest extends PHPUnit_Framework_TestCase
 {
