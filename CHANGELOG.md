@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Fix a wrongly named exception class
+
 # 1.0.2
 
 * Fix a namespace issue
