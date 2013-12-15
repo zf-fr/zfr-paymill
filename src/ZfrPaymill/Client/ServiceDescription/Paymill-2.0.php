@@ -34,7 +34,8 @@ $errors = array(
         'code'  => 412
     ),
     array(
-        'class' => 'ZfrPaymill\Exception\ServerErrorException'
+        'class' => 'ZfrPaymill\Exception\ServerErrorException',
+        'code'  => 500
     )
 );
 

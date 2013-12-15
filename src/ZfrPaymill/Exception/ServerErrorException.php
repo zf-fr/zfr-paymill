@@ -16,9 +16,7 @@
  * and is licensed under the MIT license.
  */
 
-namespace ZfrPaymill;
-
-use ZfrPaymill\Exception\AbstractException;
+namespace ZfrPaymill\Exception;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
